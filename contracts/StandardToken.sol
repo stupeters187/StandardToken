@@ -1,3 +1,5 @@
+pragma solidity ^0.4.8;
+
 contract StandardToken {
   
   address public owner;
@@ -8,9 +10,9 @@ contract StandardToken {
     balances[owner] = 1000;
   }
 
-  function transfer(address _to, uint _value) return (bool success) {
+  function transfer(address _to, uint _value) returns (bool success) {
     if (balances[msg.sender] < _value) {
-      return false
+      return false;
     }
 
 

@@ -15,7 +15,6 @@ contract StandardToken {
       return false;
     }
 
-
     balances[msg.sender] -= _value;
     balances[_to] += _value;
     return true;
